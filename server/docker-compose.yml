@@ -1,0 +1,11 @@
+services:
+  pos-server:
+    build: .
+    container_name: pos-server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PRINTER_URL=http://pos-zero:8000
+    volumes:
+      - ./templates:/app/templates
