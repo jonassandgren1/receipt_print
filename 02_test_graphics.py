@@ -71,7 +71,7 @@ def prepare_image_for_pos58(image_path, target_width=384):
 
 def run_graphics_test(image_path=None, vendor_id=0x28e9, product_id=0x0289, in_ep=0x81, out_ep=0x01):
     if not image_path:
-        image_path = '/Volumes/Ugreen 2TB/Develop/kvitto_skrivare/coker.jpg'
+        image_path = '/Volumes/Ugreen 2TB/Develop/kvitto_skrivare/lager.jpg'
 
     print(f"[*] Behandlar bild: {image_path}...")
     processed_img = prepare_image_for_pos58(image_path)
@@ -91,7 +91,7 @@ def run_graphics_test(image_path=None, vendor_id=0x28e9, product_id=0x0289, in_e
         # center alignment och raster image
         printer.image(processed_img, impl="bitImageRaster")
 
-        printer.text("\nLook at this good dog!\n")
+        printer.text("\nLycka till ikväll, drick järnet!!!\n")
         printer.text("--------------------------------\n")
         printer.text(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n\n\n\n")
 
